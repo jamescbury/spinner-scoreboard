@@ -47,38 +47,38 @@ npm run dev
 
 ```mermaid
 graph TD
-    subgraph App [App.jsx]
-        AppState[State Management<br/>participants[]<br/>selectedParticipant<br/>pickedParticipants<br/>removeAfterSpin]
+    subgraph App[App.jsx]
+        AppState["State Management
+        participants[]
+        selectedParticipant
+        pickedParticipants
+        removeAfterSpin"]
     end
 
-    subgraph MainComponents [Main Components]
+    subgraph MainComponents[Main Components]
         SW[SpinnerWheel]
         LB[LeaderBoard]
         ST[ScoreTable]
     end
 
-    subgraph DataFlow [Data & Actions]
+    subgraph DataFlow[Data & Actions]
         Spin[Spin Action]
         Score[Score Updates]
         Add[Add Participant]
         Return[Return to Wheel]
     end
 
-    %% Component Connections
     App --> SW
     App --> LB
     App --> ST
 
-    %% Data Flow
-    AppState --> |participants<br/>availableParticipants|SW
+    AppState --> |"participants availableParticipants"|SW
     AppState --> |participants|LB
     AppState --> |participants|ST
     
-    %% Actions
     SW --> |onSpinEnd|AppState
-    ST --> |onAddParticipant<br/>onUpdateScore<br/>onReturnToWheel|AppState
+    ST --> |"onAddParticipant onUpdateScore onReturnToWheel"|AppState
 
-    %% Styling
     classDef component fill:#2d2d2d,stroke:#363636,color:white
     classDef state fill:#363636,stroke:#4CAF50,color:white
     classDef action fill:#404040,stroke:#4DC9FF,color:white
