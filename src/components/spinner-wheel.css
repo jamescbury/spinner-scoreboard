@@ -1,0 +1,113 @@
+/* Container for the wheel and spin button */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Main wheel styles */
+.wheel {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  border: 5px solid #2d2d2d;
+  margin-bottom: 12px;
+  background-color: #2d2d2d;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Wheel slice hover effect */
+.wheel-slice {
+  transition: filter 0.2s;
+}
+
+.wheel-slice:hover {
+  filter: brightness(1.1);
+}
+
+/* Text within wheel slices */
+.wheel-text {
+  fill: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+/* Empty wheel message */
+.empty-wheel-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+  font-weight: 500;
+}
+
+/* Spin button styles */
+.spin-button {
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #FF61D8, #9B4DFF);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.spin-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.spin-button:disabled {
+  background: linear-gradient(145deg, #cccccc, #999999);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.reset-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ff4d4d, #cc0000);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reset-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.reset-button:disabled {
+  background: linear-gradient(145deg, #cccccc, #999999);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+} 

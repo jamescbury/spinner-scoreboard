@@ -1,0 +1,93 @@
+.leader-board {
+  background: #2d2d2d;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+}
+
+.leader-board h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.leader-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background-color: #363636;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.leader-table thead {
+  background-color: #363636;
+}
+
+.leader-table tbody {
+  background-color: #2d2d2d;
+}
+
+.leader-table th,
+.leader-table td {
+  padding: 8px 4px;
+  text-align: left;
+  border-bottom: 1px solid #404040;
+}
+
+.leader-table th {
+  color: #888;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leader-table tr:last-child td {
+  border-bottom: none;
+}
+
+.leader-rank {
+  text-align: center;
+  font-weight: 600;
+  color: #888;
+  white-space: nowrap;
+  width: 40px;
+  padding: 4px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.leader-name {
+  font-weight: 500;
+  padding-left: 8px;
+}
+
+.leader-score {
+  text-align: right;
+  font-weight: 600;
+  color: #4CAF50;
+  padding-right: 8px;
+}
+
+.medal {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin: -2px 0;
+}
+
+/* Regular rank numbers (4th and 5th place) */
+.leader-rank > span:not(.medal) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px; /* Match medal width */
+  padding: 4px 0;
+} 

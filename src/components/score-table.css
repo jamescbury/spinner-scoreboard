@@ -1,0 +1,118 @@
+/* Main table container */
+.score-table {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Table header */
+.score-table h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Table layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+/* Table cell styles */
+th, td {
+  padding: 8px;
+  font-size: 12px;
+  text-align: left;
+  border-bottom: 1px solid #404040;
+  color: white;
+}
+
+th {
+  background-color: #363636;
+  font-weight: 600;
+}
+
+/* Column widths and alignment */
+th:nth-child(1) { width: 50%; text-align: left; }
+th:nth-child(2) { width: 20%; padding-left: 20px; text-align: center; }
+th:nth-child(3) { width: 30%; text-align: center; }
+
+td:nth-child(2) { padding-left: 20px; text-align: center; }
+td:nth-child(3) { text-align: center; }
+
+/* Action buttons */
+td button {
+  margin: 0 2px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #404040;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+
+td button:hover {
+  background-color: #505050;
+}
+
+td button:first-child {
+  color: #4CAF50;
+}
+
+td button.return-button {
+  color: #4DC9FF;
+  font-size: 16px;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+td button.return-button:hover {
+  background-color: #505050;
+  color: #7DD9FF;
+}
+
+/* Add participant form */
+.add-participant-form {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #404040;
+  display: flex;
+  gap: 6px;
+}
+
+.add-participant-form input {
+  flex: 1;
+  padding: 6px;
+  font-size: 12px;
+  background-color: #404040;
+  border: 2px solid #505050;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.add-participant-form input::placeholder {
+  color: #888;
+}
+
+.add-participant-form button {
+  padding: 6px 12px;
+  font-size: 12px;
+  background: linear-gradient(145deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+} 

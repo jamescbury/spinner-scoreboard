@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 440px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-participant {
+  text-align: center;
+  margin: 8px 0;
+  padding: 8px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.round-complete {
+  font-size: 0.8rem;
+  color: #4CAF50;
+  margin-top: 4px;
+}
+
+.footer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #404040;
+  width: 100%;
+}
+
+.remove-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remove-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+.reset-button {
+  padding: 8px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #2d2d2d;
+  color: #888;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 120px;
+}
+
+.reset-button:hover:not(:disabled) {
+  color: #ff4d4d;
+  border-color: #ff4d4d;
+  background: #333;
+}
+
+.reset-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.wheel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.score-table {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* Add specific styles for the leaderboard container */
+.leader-board {
+  background: #363636;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+}
+
+.leader-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background-color: #2d2d2d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.leader-table thead tr {
+  background-color: #363636;
+}
+
+.leader-table tbody tr {
+  background-color: #2d2d2d;
+}
+
+/* Move these styles to App.css since they're layout-specific */
+.leader-board h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: #363636;
+  padding: 8px;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Update the medal styles */
+.medal {
+  font-size: 24px; /* Reduced from 32px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin: -2px 0; /* Reduced negative margin since emoji is smaller */
+}
+
+.leader-rank {
+  text-align: center;
+  font-weight: 600;
+  color: #888;
+  white-space: nowrap;
+  width: 45px; /* Slightly reduced since medals are smaller */
+  padding: 4px;
+}
