@@ -47,6 +47,7 @@ npm run dev
 
 ```mermaid
 graph TD
+    %% Main App and State
     subgraph App[App.jsx]
         AppState["State Management
         participants[]
@@ -55,34 +56,50 @@ graph TD
         removeAfterSpin"]
     end
 
-    subgraph MainComponents[Main Components]
+    %% Components with their primary actions
+    subgraph Wheel[Spinner Section]
         SW[SpinnerWheel]
-        LB[LeaderBoard]
+        SpinAction["Spin Action
+        onSpinEnd()"]
+    end
+
+    subgraph Score[Score Management]
         ST[ScoreTable]
+        ScoreActions["Score Actions
+        onAddParticipant()
+        onUpdateScore()
+        onReturnToWheel()"]
     end
 
-    subgraph DataFlow[Data & Actions]
-        Spin[Spin Action]
-        Score[Score Updates]
-        Add[Add Participant]
-        Return[Return to Wheel]
+    subgraph Display[Display Section]
+        LB[LeaderBoard]
     end
 
+    %% Component Relationships
     App --> SW
-    App --> LB
     App --> ST
+    App --> LB
 
-    AppState --> |"participants availableParticipants"|SW
+    %% Data Flow - State to Components
+    AppState --> |"participants
+    availableParticipants"|SW
     AppState --> |participants|LB
     AppState --> |participants|ST
-    
-    SW --> |onSpinEnd|AppState
-    ST --> |"onAddParticipant onUpdateScore onReturnToWheel"|AppState
 
+    %% Action Flow
+    SW --> SpinAction
+    SpinAction --> |updates|AppState
+    
+    ST --> ScoreActions
+    ScoreActions --> |updates|AppState
+
+    %% Styling
     classDef component fill:#2d2d2d,stroke:#363636,color:white
     classDef state fill:#363636,stroke:#4CAF50,color:white
     classDef action fill:#404040,stroke:#4DC9FF,color:white
+    classDef section fill:#1a1a1a,stroke:#505050,color:white
 
     class App,SW,LB,ST component
     class AppState state
-    class Spin,Score,Add,Return action
+    class SpinAction,ScoreActions action
+    class Wheel,Score,Display section
